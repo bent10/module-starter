@@ -2,7 +2,7 @@
 
 <!-- [![GitHub Workflow Status](https://img.shields.io/github/workflow/status/bent10/module-starter/Release?style=flat-square)](https://github.com/bent10/module-starter/actions/workflows/release.yml) -->
 
-[![GitHub](https://img.shields.io/github/license/bent10/module-starter?style=flat-square)](license)
+![GitHub](https://img.shields.io/github/license/bent10/module-starter)
 
 A bare-bones template for TypeScript module.
 
