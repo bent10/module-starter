@@ -1,0 +1,11 @@
+{
+  "extends": ["config:base"],
+  "labels": ["dependencies"],
+  "rangeStrategy": "bump",
+  "packageRules": [
+    {
+      "matchUpdateTypes": ["minor", "patch", "pin", "digest"],
+      "automerge": true
+    }
+  ]
+}
