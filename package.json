@@ -40,7 +40,7 @@
     "coverage": "npm test -- --coverage"
   },
   "devDependencies": {
-    "doogu": "^2.3.15"
+    "doogu": "^2.3.17"
   },
   "config": {
     "commitizen": {
