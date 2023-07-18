@@ -4,8 +4,6 @@
 
 # Module Starter
 
-![GitHub](https://img.shields.io/github/license/bent10/module-starter)
-
 Module Starter is a bare-bones template designed for modern web projects. It provides a lightweight starting point for developers to create web modules using the latest syntax and output to any JavaScript format. The template offers various features and automation tools to streamline the development process.
 
 ## Features
@@ -77,6 +75,8 @@ Now you can use `git cz` or just `cz` instead of `git commit` when committing. Y
 git add . && git cz
 ```
 
-## Thank you
+## License
+
+![GitHub](https://img.shields.io/github/license/bent10/module-starter)
 
 A project by [Stilearning](https://stilearning.com) &copy; 2021-2023.
