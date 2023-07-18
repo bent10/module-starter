@@ -4,7 +4,7 @@
  * ## Install
  *
  * ```bash
- * npm i mymodule
+ * npm i foo
  * ```
  *
  * ## Usage
@@ -13,7 +13,7 @@
  * [esm-package](https://gist.github.com/sindresorhus/a39789f98801d908bbc7ff3ecc99d99c).
  *
  * ```js
- * import { fooFn } from 'mymodule'
+ * import { fooFn } from 'foo'
  *
  * const foo = fooFn()
  * ```

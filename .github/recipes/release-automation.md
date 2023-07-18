@@ -1,42 +1,40 @@
 [&laquo; Back to recipes](https://github.com/bent10/module-starter#recipes)
 
-# Release automation
+## Release Automation
 
-As our repo gets bigger, handling the release process can be a pain point and time consuming. We're going to simplify the [GitHub releases](https://help.github.com/articles/about-releases) process using GitHub action, which will take care of the releases when we do `git push` on the repo.
+This guide will help you simplify the GitHub releases process and save time by automating the release workflow when pushing changes to the repository. Before we begin, make sure you are familiar with [GitHub releases](https://help.github.com/articles/about-releases) and have a basic understanding of Git and GitHub.
 
+- [Release Automation](#release-automation)
 - [Features](#features)
 - [Workflow](#workflow)
   - [Environment Variables](#environment-variables)
-  - [Release configuration](#release-configuration)
-- [Related](#related)
+  - [Release Configuration](#release-configuration)
+- [Related Resources](#related-resources)
 
 ## Features
 
-- Analyze commits with [conventional-changelog](https://github.com/conventional-changelog/conventional-changelog)
-- Generate changelog content with [conventional-changelog](https://github.com/conventional-changelog/conventional-changelog) then update `changelog.md` file
-- Commit release assets to the repository
-- Publish [GitHub releases](https://help.github.com/articles/about-releases)
-- Publish NPM packages
+The release automation process provides the following features:
+
+- Analyze commits with [conventional-changelog](https://github.com/conventional-changelog/conventional-changelog).
+- Generate changelog content using [conventional-changelog](https://github.com/conventional-changelog/conventional-changelog) and update the `changelog.md` file.
+- Commit release assets to the repository.
+- Publish [GitHub releases](https://help.github.com/articles/about-releases).
+- Publish NPM packages.
 
 ## Workflow
 
-The [`release`](../workflows/release.yml) workflow will kick in as soon as changes land on branches `main`, `next`, `next-major`, `beta`, `alpha`, and `*.x`. Then running the tasks to build and releases. Below are the steps you have to do:
+The release automation workflow is triggered when changes are pushed to branches such as `main`, `next`, `next-major`, `beta`, `alpha`, and `*.x`. The workflow performs the necessary tasks to build and release the project. To utilize the workflow, follow these steps:
 
 ### Environment Variables
 
-To run this workflow, you will need to add the following [environment variables](https://docs.github.com/en/actions/reference/encrypted-secrets#creating-encrypted-secrets-for-a-repository) to your GitHub repository:
+Before running the workflow, ensure that the following [environment variables](https://docs.github.com/en/actions/reference/encrypted-secrets#creating-encrypted-secrets-for-a-repository) are added to your GitHub repository:
 
-`GH_TOKEN`
+- `GH_TOKEN`: Copy and paste your [GitHub personal access token](https://github.com/settings/tokens) with the 'repo' scope into the **value** field.
+- `NPM_TOKEN`: Copy and paste your [NPM token](https://docs.npmjs.com/about-access-tokens) into the **value** field.
 
-Copy and paste your [GitHub personal access token](https://github.com/settings/tokens) (with ‘repo’ scope) in the **value** field.
+### Release Configuration
 
-`NPM_TOKEN`
-
-Copy and paste your [NPM token](https://docs.npmjs.com/about-access-tokens) in the **value** field.
-
-### Release configuration
-
-After you have added the environment variables, you just need to add the following configuration into your `package.json` file:
+After adding the required environment variables, include the following configuration in your `package.json` file:
 
 ```json
 {
@@ -78,7 +76,7 @@ After you have added the environment variables, you just need to add the followi
 }
 ```
 
-And create `release.yml` file in the `.github/workflows/` folder, then copy the code below:
+Additionally, create a `release.yml` file in the `.github/workflows/` folder and copy the following code into it:
 
 ```yml
 name: Release
@@ -122,9 +120,9 @@ jobs:
         run: semantic-release
 ```
 
-## Related
+## Related Resources
 
-For more detailed configuration, below are the best place to go:
+For more detailed configuration and information, refer to the following resources:
 
 - [semantic-release](https://github.com/semantic-release/semantic-release)
 - [@semantic-release/error](https://github.com/semantic-release/error)
@@ -134,3 +132,5 @@ For more detailed configuration, below are the best place to go:
 - [@semantic-release/git](https://github.com/semantic-release/git)
 - [@semantic-release/github](https://github.com/semantic-release/github)
 - [@semantic-release/npm](https://github.com/semantic-release/npm)
+
+We hope this documentation helps you streamline the release process using GitHub Actions and semantic versioning. If you have any further questions or need assistance, please don't hesitate to reach out.

@@ -32,15 +32,17 @@
     "license"
   ],
   "scripts": {
-    "start": "npm run build && npm run watch",
-    "watch": "chokidar \"src/*.ts\" -c \"npm run build\"",
-    "lint": "tsc --noEmit && eslint \"./src\" --ext \".ts\" --cache --cache-location \"node_modules/.cache/.eslintcache\"",
-    "build": "swc \"./src\" -d \"dist\" && tsc -d --emitDeclarationOnly",
-    "test": "node --experimental-vm-modules --no-warnings ./node_modules/jest/bin/jest.js --verbose",
-    "coverage": "npm test -- --coverage"
+    "start": "npm run dev",
+    "dev": "npm run types && vite build --emptyOutDir=false --watch",
+    "build": "vite build && npm run types",
+    "test": "vitest --ui",
+    "coverage": "vitest run --coverage",
+    "types": "tsc -d --emitDeclarationOnly --outDir ./dist && resolve-tspaths -o ./dist",
+    "lint": "tsc --noEmit && eslint .",
+    "format": "prettier --write ."
   },
   "devDependencies": {
-    "doogu": "^2.4.151"
+    "doogu": "^3.1.5"
   },
   "config": {
     "commitizen": {
@@ -48,25 +50,7 @@
     }
   },
   "eslintConfig": {
-    "extends": "./node_modules/doogu/config/eslint.json"
+    "extends": "./node_modules/doogu/eslint"
   },
-  "prettier": "doogu/config/prettier.json",
-  "jest": {
-    "transform": {
-      "^.*.ts$": [
-        "@swc/jest"
-      ]
-    },
-    "moduleNameMapper": {
-      "^./utils.js$": "<rootDir>/test/utils.ts"
-    },
-    "extensionsToTreatAsEsm": [
-      ".ts"
-    ],
-    "watchPathIgnorePatterns": [
-      "<rootDir>/test/fixtures"
-    ],
-    "clearMocks": true,
-    "coverageDirectory": "coverage"
-  }
+  "prettier": "doogu/prettier.json"
 }

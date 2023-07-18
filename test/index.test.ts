@@ -1,5 +1,7 @@
-import { fooFn } from '../dist/index.js'
+import { fooFn } from '../src/index.js'
 
-test('foo should be 3', () => {
-  expect(fooFn(1, 2)).toBe(3)
+describe('foo', () => {
+  it('should result 3', () => {
+    expect(fooFn(1, 2)).toBe(3)
+  })
 })
