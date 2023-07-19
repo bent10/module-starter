@@ -18,7 +18,7 @@ Module Starter is a bare-bones template designed for modern web projects. It pro
 
 ## Installation
 
-To start a new project using Module Starter, you can either click the "Use this template" button on GitHub or manually clone the repository. After cloning, navigate to the project directory and install the required dependencies using the following command:
+To start a new project using Module Starter, you can either **click the "Use this template"** button on GitHub or manually clone the repository. After cloning, navigate to the project directory and install the required dependencies using the following command:
 
 ```bash
 npm i
