@@ -1,6 +1,6 @@
 {
   "name": "module-starter",
-  "description": "A bare-bones template for TypeScript module.",
+  "description": "A bare-bones template designed for modern web projects",
   "version": "0.0.0-development",
   "publishConfig": {
     "access": "public"
