@@ -1,10 +1,9 @@
 [&laquo; Back to recipes](https://github.com/bent10/module-starter#recipes)
 
-## Release Automation
+# Release Automation
 
 This guide will help you simplify the GitHub releases process and save time by automating the release workflow when pushing changes to the repository. Before we begin, make sure you are familiar with [GitHub releases](https://help.github.com/articles/about-releases) and have a basic understanding of Git and GitHub.
 
-- [Release Automation](#release-automation)
 - [Features](#features)
 - [Workflow](#workflow)
   - [Environment Variables](#environment-variables)
