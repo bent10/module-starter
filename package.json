@@ -43,7 +43,7 @@
     "format": "prettier --write ."
   },
   "devDependencies": {
-    "doogu": "^3.2.3"
+    "doogu": "^3.2.5"
   },
   "config": {
     "commitizen": {
