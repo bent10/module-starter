@@ -16,7 +16,7 @@ Module Starter is a bare-bones template designed for modern web projects. It pro
 - **NPM auto publish:** Automatically publishes the project to NPM after each push, simplifying the package distribution process.
 - **Auto updates changelog:** Automates the process of updating the changelog file, making it easier to track project changes.
 
-## Installation
+## Install
 
 To start a new project using Module Starter, you can either **click the "Use this template"** button on GitHub or manually clone the repository. After cloning, navigate to the project directory and install the required dependencies using the following command:
 
@@ -31,8 +31,6 @@ npx degit "bent10/module-starter" my-project
 cd my-project
 npm i
 ```
-
-> This package is pure [ESM](https://gist.github.com/sindresorhus/a39789f98801d908bbc7ff3ecc99d99c) and requires Node.js `^12.22 || ^14.17 || >=16.10.0`
 
 ## Available Commands
 
