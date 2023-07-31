@@ -36,8 +36,8 @@ npm i
 
 Use the following commands in the project directory:
 
-- `npm start`: Alias for `npm run dev`. Runs the development build and watches for changes.
-- `npm run dev`: Runs the type checking and starts Vite to build the project. The `--emptyOutDir=false` flag ensures that the output directory is not emptied during development. Watches for changes.
+- `npm start`: Alias for `npm run dev`.
+- `npm run dev`: Runs the development build and watches for changes.
 - `npm run build`: Builds the project using Vite and runs the type checking.
 - `npm test`: Runs tests with the `vitest` command, using the UI.
 - `npm run coverage`: Runs tests with the `vitest` command and generates code coverage.
