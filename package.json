@@ -49,7 +49,7 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "doogu": "^3.2.6"
+    "doogu": "3.2.6"
   },
   "config": {
     "commitizen": {
