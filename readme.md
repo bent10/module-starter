@@ -77,4 +77,4 @@ git add . && git cz
 
 ![GitHub](https://img.shields.io/github/license/bent10/module-starter)
 
-A project by [Stilearning](https://stilearning.com) &copy; 2021-2023.
+A project by [Stilearning](https://stilearning.com) &copy; 2021-2024.
