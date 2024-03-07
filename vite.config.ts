@@ -1,11 +1,12 @@
 /// <reference types="vitest" />
-import { resolve } from 'node:path'
 import { defineConfig } from 'vite'
+import umdFormatResolver from 'vite-plugin-resolve-umd-format'
 
 export default defineConfig({
+  plugins: [umdFormatResolver()],
   build: {
     lib: {
-      entry: resolve(__dirname, 'src/index.ts'),
+      entry: 'src/index.ts',
       name: 'myLib',
       formats: ['es', 'cjs', 'umd'],
       fileName: 'index'
