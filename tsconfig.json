@@ -1,9 +1,5 @@
 {
   "extends": "@tsconfig/node16/tsconfig.json",
 
-  "compilerOptions": {
-    "paths": {}
-  },
-
   "include": ["src"]
 }

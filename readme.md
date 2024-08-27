@@ -2,29 +2,33 @@
 
 <!-- [![GitHub Workflow Status](https://img.shields.io/github/workflow/status/bent10/module-starter/Release?style=flat-square)](https://github.com/bent10/module-starter/actions/workflows/release.yml) -->
 
-# Module Starter
+# Module starter
 
-Module Starter is a bare-bones template designed for modern web projects. It provides a lightweight starting point for developers to create web modules using the latest syntax and output to any JavaScript format. The template offers various features and automation tools to streamline the development process.
+A minimalist template for modern web development.
 
 ## Features
 
-- **Fast and efficient:** Designed to provide a quick and efficient starting point for your web projects.
-- **Latest syntax support:** Write your code using the latest JavaScript syntax and features.
-- **Flexible output:** Allows developers to output their code in any JavaScript format that suits their project requirements.
-- **Auto updates dependencies:** Automatically updates dependencies, keeping the project up-to-date with the latest versions.
-- **GitHub auto releases:** Automated release process after each push, making it easy to manage project versions.
-- **NPM auto publish:** Automatically publishes the project to NPM after each push, simplifying the package distribution process.
-- **Auto updates changelog:** Automates the process of updating the changelog file, making it easier to track project changes.
+- **Quick start:** Efficient starting point for web projects.
+- **Modern syntax:** Supports the latest JavaScript features.
+- **Flexible output:** Output in any JavaScript format.
+- **Automatic updates:** Keeps your dependencies current. See [recipes](#recipes) for more info.
+- **Automated releases:** Automatically handles GitHub releases, NPM publishing, and changelog updates. Check out [recipes](#recipes) for details.
 
-## Install
+## Installation
 
-To start a new project using Module Starter, you can either **click the "Use this template"** button on GitHub or manually clone the repository. After cloning, navigate to the project directory and install the required dependencies using the following command:
+To start a new project with Module Starter, use one of the following methods:
+
+### Clone from GitHub
+
+Click "Use this template" on GitHub or clone the repository. Then, install dependencies:
 
 ```bash
 npm i
 ```
 
-Alternatively, you can use the `npx degit` command to clone the template into a new project directory and install the dependencies:
+### Use `npx degit`
+
+Clone the template and install dependencies:
 
 ```bash
 npx degit "bent10/module-starter" my-project
@@ -32,20 +36,18 @@ cd my-project
 npm i
 ```
 
-## Available Commands
-
-Use the following commands in the project directory:
+## Commands
 
 - `npm start`: Alias for `npm run dev`.
-- `npm run dev`: Runs the development build and watches for changes.
-- `npm run build`: Builds the project using Vite and runs the type checking.
-- `npm test`: Runs tests with the `vitest` command, using the UI.
-- `npm run coverage`: Runs tests with the `vitest` command and generates code coverage.
-- `npm run types`: Runs the TypeScript compiler to emit declaration files (`*.d.ts`) to the `./dist` directory. Resolves TypeScript path aliases using `resolve-tspaths`.
-- `npm run lint`: Runs the TypeScript compiler with `--noEmit` flag to perform type checking and runs ESLint to lint the project.
-- `npm run format`: Runs Prettier to format the project files.
+- `npm run dev`: Starts development mode and watches for changes.
+- `npm run build`: Builds the project and checks types.
+- `npm test`: Runs tests with Vitest.
+- `npm run coverage`: Generates test coverage reports.
+- `npm run types`: Generates TypeScript declaration files.
+- `npm run lint`: Checks types and lints the project.
+- `npm run format`: Formats code using Prettier.
 
-Feel free to use these commands according to your development needs.
+Use these commands to manage your development workflow.
 
 ## Recipes
 
