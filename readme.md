@@ -8,19 +8,19 @@ A minimalist template for modern web development.
 
 ## Features
 
-- **Quick start:** Efficient starting point for web projects.
-- **Modern syntax:** Supports the latest JavaScript features.
-- **Flexible output:** Output in any JavaScript format.
-- **Automatic updates:** Keeps your dependencies current. See [recipes](#recipes) for more info.
-- **Automated releases:** Automatically handles GitHub releases, NPM publishing, and changelog updates. Check out [recipes](#recipes) for details.
+- **Quick start:** Efficient starting point for Web and Node.js projects
+- **Modern syntax:** Supports the latest JavaScript features
+- **Flexible output:** Output in any JavaScript format
+- **Automatic updates:** Keeps your dependencies up to date. See [recipes](#recipes) for more info
+- **Automated releases:** Automatically handles GitHub releases, NPM publishing, and changelog updates. Check out [recipes](#recipes) for details
 
 ## Installation
 
-To start a new project with Module Starter, use one of the following methods:
+To start a new project with this template, use one of the following methods:
 
 ### Clone from GitHub
 
-Click "Use this template" on GitHub or clone the repository. Then, install dependencies:
+Click the "Use this template" button above or clone the repository. Then, install dependencies:
 
 ```bash
 npm i
@@ -38,25 +38,25 @@ npm i
 
 ## Commands
 
-- `npm start`: Alias for `npm run dev`.
-- `npm run dev`: Starts development mode and watches for changes.
-- `npm run build`: Builds the project and checks types.
-- `npm test`: Runs tests with Vitest.
-- `npm run coverage`: Generates test coverage reports.
-- `npm run types`: Generates TypeScript declaration files.
-- `npm run lint`: Checks types and lints the project.
-- `npm run format`: Formats code using Prettier.
+- `npm start`: Alias for `npm run dev`
+- `npm run dev`: Starts development mode and watches for changes
+- `npm run build`: Builds the project and checks types
+- `npm test`: Runs tests with Vitest
+- `npm run coverage`: Generates test coverage reports
+- `npm run types`: Generates TypeScript declaration files
+- `npm run lint`: Checks types and lints the project
+- `npm run format`: Formats code using Prettier
 
 Use these commands to manage your development workflow.
 
 ## Recipes
 
-- [Automated dependency updates](.github/recipes/setup-renovate.md) – Explains how to set up automated dependency updates using Renovate.
-- [Release automation](.github/recipes/release-automation.md) - Guides you on automating the release process of your project.
+- [Automated dependency updates](.github/recipes/setup-renovate.md) – Set up automated updates with Renovate
+- [Release automation](.github/recipes/release-automation.md) – Automate your project's release process
 
 ## Related
 
-- [monorepo-starter](https://github.com/bent10/monorepo-starter) – A monorepo starter template using native NPM workspace
+- [monorepo-starter](https://github.com/bent10/monorepo-starter) – A starter template for a monorepo using NPM workspaces
 - [doogu](https://github.com/bent10/doogu) – A wrapper around modern JavaScript tools
 
 ## Contributing
