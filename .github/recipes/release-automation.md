@@ -70,7 +70,7 @@ jobs:
       - run: npm test
 
       - name: Install release dependencies
-        run: npm i -D semantic-release @semantic-release/changelog @semantic-release/git
+        run: npm i -g semantic-release @semantic-release/changelog @semantic-release/git
 
       - name: Run semantic release
         env:
