@@ -1,6 +1,6 @@
 [&laquo; Back to recipes](https://github.com/bent10/module-starter#recipes)
 
-# Release Automation
+# Release automation
 
 Automate your GitHub release workflow to save time. This guide covers how to set up automatic releases using GitHub Actions and semantic versioning.
 
@@ -56,23 +56,46 @@ on:
       - alpha
       - '*.x'
 
+permissions:
+  contents: read # for checkout
+
 jobs:
   release:
+    name: Releasing
     runs-on: ubuntu-latest
+    permissions:
+      contents: write # to be able to publish a GitHub release
+      issues: write # to be able to comment on released issues
+      pull-requests: write # to be able to comment on released pull requests
+      id-token: write # to enable use of OIDC for npm provenance
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+      - name: Checkout
+        uses: actions/checkout@v4
         with:
-          node-version: 20.9.0
-      - run: npm ci
-      - run: npm run lint
-      - run: npm run build
-      - run: npm test
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 'lts/*'
+
+      - name: Install dependencies
+        run: npm clean-install
+
+      - name: Verify the integrity of provenance attestations and registry signatures for installed dependencies
+        run: npm audit signatures
+
+      - name: Test and building
+        run: |
+          npm run lint
+          npm run build
+          npm test
 
       - name: Install release dependencies
-        run: npm i -g semantic-release @semantic-release/changelog @semantic-release/git
+        run: |
+          npm i -D semantic-release @semantic-release/changelog @semantic-release/git
 
-      - name: Run semantic release
+      - name: Semantic release
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
