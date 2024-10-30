@@ -50,7 +50,7 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "doogu": "4.1.0",
+    "doogu": "4.1.2",
     "vite-plugin-resolve-umd-format": "1.0.0"
   },
   "config": {
